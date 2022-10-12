@@ -6,10 +6,10 @@ STAT 628 Module 2: Body Fat Project (Fall 2022)
 ### Project information
 
 Team member:
-1. Marwa Eltgani ()
-2. Sheng Huang ()
-3. Samach Sathitvudh ()
-4. Xinyan Wang ()
+1. Marwa Eltgani (eltgani@wisc.edu)
+2. Sheng Huang (shaung452@wisc.edu)
+3. Samach Sathitvudh (sathitvudh@wisc.edu)
+4. Xinyan Wang (xwang2587@wisc.edu)
 
 The purpose of this project is to perform a modern statistical analysis from the **BODYFAT** dataset. Our methodology includes:
 - Exploratory Data Analysis: to investigate the variables' distributions along with the outliers
