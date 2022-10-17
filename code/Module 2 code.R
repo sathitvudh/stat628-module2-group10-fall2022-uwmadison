@@ -1,7 +1,7 @@
 library(tidyverse)
 library(Metrics)
 library(corrplot)
-bodyFat=read.csv("~/Downloads/BodyFat.csv",header=TRUE)
+bodyFat=read.csv("BodyFat.csv",header=TRUE)
 
 #summary of data
 summary(bodyFat)
@@ -78,7 +78,7 @@ summary(model)
 #Calculate RMSE
 rmse(bodyFat$BODYFAT,predict(model))
 #check for linearity and homoscedasticity
-plot(predict(model),resid(model),xlab="Predicted Body Fat",ylab="Standardized Residuals")+abline(h=0)
+plot(predict(model),rstandard(model),xlab="Predicted Body Fat",ylab="Standardized Residuals")+abline(h=0)
 #check for normality
 qqnorm(rstandard(model))
 qqline(rstandard(model))
@@ -111,7 +111,7 @@ summary(model5)
 #Calculate RMSE
 rmse(bodyFat$BODYFAT,predict(model5))
 #check for linearity and homoscedasticity
-plot(predict(model5),resid(model5),xlab="Predicted Body Fat",ylab="Standardized Residuals")+abline(h=0)
+plot(predict(model5),rstandard(model5),xlab="Predicted Body Fat",ylab="Standardized Residuals")+abline(h=0)
 #check for normality
 qqnorm(rstandard(model5))
 qqline(rstandard(model5))
@@ -141,20 +141,21 @@ summary(model11)
 #Calculate RMSE
 rmse(bodyFat$BODYFAT,predict(model11))
 #check for linearity and  homoscedasticity
-plot(predict(model11),resid(model11),xlab="Predicted Body Fat",ylab="Standardized Residuals",main="Residual Plot")+abline(h=0)
+par(mfrow = c(1,1))
+plot(predict(model11),rstandard(model11),xlab="Predicted Body Fat",ylab="Standardized Residuals",main="Residuals Plot")+abline(h=0)
 #check for normality
 qqnorm(rstandard(model11))
 qqline(rstandard(model11))
 shapiro.test(model11$res)
 
 ## Additional linearity assumption
-par(mfrow = c(1,3))
+#par(mfrow = c(1,3))
 plot(bodyFat$ABDOMEN, bodyFat$BODYFAT, xlab="Abdomen circumference (cm)", ylab="Body Fat Percentage", main="Abdomen vs % Body Fat")
 plot(bodyFat$WEIGHT, bodyFat$BODYFAT, xlab="Weight (lbs)", ylab="Body Fat Percentage", main="Weight vs % Body Fat")
 plot(bodyFat$WRIST, bodyFat$BODYFAT, xlab="Wrist circumference (cm)", ylab="Body Fat Percentage", main="Wrist vs % Body Fat")
 
 ## Additional independence assumption
-par(mfrow = c(1,3))
+#par(mfrow = c(1,3))
 plot(bodyFat$ABDOMEN,rstandard(model11),xlab="Abdomen",ylab="Standardized Residuals", main="Abdomen vs Residuals plot")+abline(h=0)
 plot(bodyFat$WEIGHT,rstandard(model11),xlab="Weight",ylab="Standardized Residuals", main="Weight vs Residuals plot")+abline(h=0)
 plot(bodyFat$WRIST,rstandard(model11),xlab="Wrist",ylab="Standardized Residuals", main="Wrist vs Residuals plot")+abline(h=0)
