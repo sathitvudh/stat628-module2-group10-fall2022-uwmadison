@@ -1,5 +1,4 @@
-# stat628-module2-group10-fall2022-UWmadison
-STAT 628 Module 2: Body Fat Project (Fall 2022)
+# STAT 628 module2 group10 Fall2022 UW-Madison
 
 ## Module 2: Body Fat Percentage Analysis
 
