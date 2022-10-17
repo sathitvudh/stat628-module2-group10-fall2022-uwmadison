@@ -18,16 +18,16 @@ The purpose of this project is to perform a modern statistical analysis from the
 
 ### Content
 #### data
-This contains both raw and cleaned data set.
+- This contains both raw and cleaned data sets we used in the analysis.
 
 #### code
-This contains R scripts for the analysis ranging from reading data, exploratory data analysis, data cleaning, data modeling to model diagnostics as well as script for Shiny app.
+- This contains R scripts for the analysis ranging from reading data, exploratory data analysis, data cleaning, data modeling to model diagnostics as well as script for Shiny app.
 
 #### image
-This contains images obtained from the code and analysis.
+- This contains images obtained from the code and analysis such as figures, tables, and plots.
 
 #### Executive Summary
-The two-page document that summarizes the analysis including the introduction, data cleaning, model selection and diagnostics as well as the strengths and weaknesses of the model.
+- The two-page document that summarizes the analysis including the introduction, data cleaning, model selection and diagnostics as well as the strengths and weaknesses of the model.
 
 ### Link to Shiny App
 https://bodyfatcalculator.shinyapps.io/bodyfat/
